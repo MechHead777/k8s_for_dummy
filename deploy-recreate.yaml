@@ -15,10 +15,7 @@ spec:
         app: test
     spec:
       containers:
-        - image: nginx:1.28
+        - image: nginx:1
           name: nginx
   strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 1
-      maxSurge: 1
+    type: Recreate 
